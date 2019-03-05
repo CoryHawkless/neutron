@@ -246,7 +246,7 @@ class IPWrapper(SubProcessBase):
 
     def add_vxlan(self, name, vni, group=None, dev=None, ttl=None, tos=None,
                   local=None, srcport=None, dstport=None, proxy=False):
-        kwargs = {'vxlan_id': vni}
+        kwargs = {'vxlan_id': vni,'vxlan_learning':0}
         if group:
             kwargs['vxlan_group'] = group
         if dev:
